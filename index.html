@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>可转债价格预测</title>
+    <script type="text/javascript">
+        function yuce(){
+            var 转股价格=parseFloat( document.getElementById('转股价格').value);
+            var 正股价格=parseFloat(document.getElementById('正股价格').value);
+            var 溢价率=parseFloat(document.getElementById('溢价率').value.replace('-',''))/100;
+            var 可转债价格 = (1+溢价率)*(正股价格/转股价格*100)
+            document.getElementById('预测价格').innerText = 可转债价格
+        }
+    </script>
+    <body>
+        <div style="width: 300px;
+    margin: 10% auto;
+    background: #CCC;
+    border: 1px solid #000;
+    padding: 10px;">
+            <h4 style="text-align: center;">可转债价格预测</h4>
+            <div>
+                <span>转股价格</span>
+                <input type="number" id="转股价格">
+            </div>
+            <div>
+                <span>正股价格</span>
+                <input type="number" id="正股价格">
+            </div>
+            <div>
+                <span>溢&nbsp;价&nbsp;率</span>
+                <input type="number" id="溢价率">%
+            </div>
+            <div>
+                <input type="button" name="" value="查询" onclick="yuce()">
+            </div>
+            <div>
+                <span>预测价格：</span><span id="预测价格"></span>
+            </div>
+        </div>
+    </body>
+</head>
+<body>
+
+</body>
+</html>
