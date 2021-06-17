@@ -4,18 +4,12 @@
     <title>可转债价格预测</title>
     <script type="text/javascript">
         function yuce(){
-            //转股价值＝100/转股价格*正股价格
-//可转债价格＝转股价值*（1+溢价率）
             var 转股价格=parseFloat( document.getElementById('转股价格').value);
             var 正股价格=parseFloat(document.getElementById('正股价格').value);
-            var 转股价值＝100/转股价格*正股价格;
-            
             var 溢价率=parseFloat(document.getElementById('溢价率').value)/100;
-            console.log('溢价率：'+溢价率);
-            var 可转债价格＝转股价值*（1+溢价率）;
-            document.getElementById('预测价格').innerText = 可转债价格;
-//             var 可转债价格 = (1+溢价率)*(正股价格/转股价格*100)
-//             document.getElementById('预测价格').innerText = 可转债价格
+            
+            var 转股价值 = (100/转股价格*正股价格);
+            var 可转债价格 =  转股价值* (1+溢价率);
         }
     </script>
     <body>
