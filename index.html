@@ -11,6 +11,7 @@
             var 转股价值＝100/转股价格*正股价格;
             
             var 溢价率=parseFloat(document.getElementById('溢价率').value)/100;
+            console.log('溢价率：'+溢价率);
             var 可转债价格＝转股价值*（1+溢价率）;
             document.getElementById('预测价格').innerText = 可转债价格;
 //             var 可转债价格 = (1+溢价率)*(正股价格/转股价格*100)
