@@ -7,7 +7,6 @@
             var 转股价格=parseFloat( document.getElementById('转股价格').value);
             var 正股价格=parseFloat(document.getElementById('正股价格').value);
             var 溢价率=parseFloat(document.getElementById('溢价率').value)/100;
-            
             var 转股价值 = (100/转股价格*正股价格);
             var 可转债价格 =  转股价值* (1+溢价率);
         }
@@ -32,7 +31,7 @@
                 <input type="number" id="溢价率">%
             </div>
             <div>
-                <input type="button" name="" value="查询" onclick="yuce()">
+                <input type="button" name="" value="查询" onclick="yuce">
             </div>
             <div>
                 <span>预测价格：</span><span id="预测价格"></span>
